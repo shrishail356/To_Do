@@ -39,6 +39,10 @@ const Notice = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    wallet7: {
+        type: Boolean,
+        default: false,
+    },
 }, { timestamps: true });
 
 module.exports = mongoose.model("Notice", Notice);
