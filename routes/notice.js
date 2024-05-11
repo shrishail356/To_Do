@@ -128,7 +128,7 @@ router.post("/addNotice", async (req, res) => {
 });
 
 router.post("/updateNotice/:id", async (req, res) => {
-  let { link, description, title, type, wallet1, wallet2, wallet3, wallet4, wallet5, wallet6 } = req.body;
+  let { link, description, title, type, wallet1, wallet2, wallet3, wallet4, wallet5, wallet6, wallet7 } = req.body;
   try {
     let notice = await Notice.findByIdAndUpdate(req.params.id, {
       link,
@@ -141,6 +141,7 @@ router.post("/updateNotice/:id", async (req, res) => {
       wallet4,
       wallet5,
       wallet6,
+      wallet7,
     });
     if (!notice) {
       return res
